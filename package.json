@@ -1,9 +1,12 @@
 {
   "name": "@Aakashsajjad095/react-native-background-geolocation",
   "version": "0.7.7",
-  "description": "Optimized background location tracking",
+  "description": "A React Native module for high-accuracy, battery-efficient background location tracking on iOS and Android",
   "main": "./index.js",
   "types": "./index.d.ts",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "link": "@Aakashsajjad095/react-native-background-geolocation/scripts/postlink.js",
     "unlink": "@Aakashsajjad095/react-native-background-geolocation/scripts/postunlink.js",
@@ -30,7 +33,8 @@
   "maintainers": [
     "Darron Park <darron1217@gmail.com>",
     "Hariks <hariks@zoho.com>",
-    "Malik Kawee <malik.kawee4@gmail.com>"
+    "Malik Kawee <malik.kawee4@gmail.com>",
+    "Aakash Sajjad <aakashsajjad095@gmail.com>"
   ],
   "license": "Apache-2.0",
   "bugs": {
