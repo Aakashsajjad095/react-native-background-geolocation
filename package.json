@@ -1,6 +1,6 @@
 {
   "name": "@aakashsajjad/react-native-background-geolocation",
-  "version": "0.7.7",
+  "version": "0.7.8",
   "description": "A React Native module for high-accuracy, battery-efficient background location tracking on iOS and Android",
   "main": "./index.js",
   "types": "./index.d.ts",

@@ -34,10 +34,10 @@ In `android/settings.gradle`
 
 ```gradle
 ...
-include ':@Aakashsajjad095_react-native-background-geolocation-common'
-project(':@Aakashsajjad095_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@Aakashsajjad095/react-native-background-geolocation/android/common')
-include ':@Aakashsajjad095_react-native-background-geolocation'
-project(':@Aakashsajjad095_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@Aakashsajjad095/react-native-background-geolocation/android/lib')
+include ':@aakashsajjad_react-native-background-geolocation-common'
+project(':@aakashsajjad_react-native-background-geolocation-common').projectDir = new File(rootProject.projectDir, '../node_modules/@Aakashsajjad095/react-native-background-geolocation/android/common')
+include ':@aakashsajjad_react-native-background-geolocation'
+project(':@aakashsajjad_react-native-background-geolocation').projectDir = new File(rootProject.projectDir, '../node_modules/@Aakashsajjad095/react-native-background-geolocation/android/lib')
 ...
 ```
 
