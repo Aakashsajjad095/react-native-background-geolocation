@@ -7,9 +7,9 @@ module.exports = {
     },
     hooks: {
       postlink:
-        "node ./node_modules/@Aakashsajjad095/react-native-background-geolocation/scripts/postlink.js",
+        "node ./node_modules/@aakashsajjad095/react-native-background-geolocation/scripts/postlink.js",
       postunlink:
-        "node ./node_modules/@Aakashsajjad095/react-native-background-geolocation/scripts/postunlink.js",
+        "node ./node_modules/@aakashsajjad095/react-native-background-geolocation/scripts/postunlink.js",
     },
   },
 };
