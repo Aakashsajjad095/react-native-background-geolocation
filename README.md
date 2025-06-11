@@ -2,10 +2,16 @@
 
 [![npm](https://img.shields.io/npm/v/@Aakashsajjad095/react-native-background-geolocation?style=flat-square)](https://www.npmjs.com/package/@Aakashsajjad095/react-native-background-geolocation)
 
-> Forked from [@hariks789/react-native-background-geolocation](https://github.com/darron1217/react-native-background-geolocation) due to inactivity.
-> Original Repo: [@mauron85/react-native-background-geolocation](https://github.com/mauron85/react-native-background-geolocation)
+
+> Forked from [@mak12/react-native-background-geolocation](https://github.com/mak12/react-native-background-geolocation),and this forked from [@hariks789/react-native-background-geolocation](https://github.com/hariks789/react-native-background-geolocation) due to inactivity.
+Original Repo: [@mauron85/react-native-background-geolocation](https://github.com/mauron85/react-native-background-geolocation)
+
 
 ## Installation
+
+```
+npm i @Aakashsajjad095/react-native-background-geolocation
+```
 
 ```
 yarn add @Aakashsajjad095/react-native-background-geolocation
@@ -170,7 +176,7 @@ ext {
 
 The repository [react-native-background-geolocation-example](https://github.com/mauron85/react-native-background-geolocation-example) hosts an example app for both iOS and Android platform.
 
-## Quick example
+## Quick Example For Class Componnet
 
 ```javascript
 import React, { Component } from "react";
@@ -313,6 +319,115 @@ class BgTracking extends Component {
 }
 
 export default BgTracking;
+```
+
+## Quick Example For Functional Componnet
+
+```javascript
+import React, { useEffect } from "react";
+import { Alert } from "react-native";
+import BackgroundGeolocation from "@Aakashsajjad095/react-native-background-geolocation";
+
+const BgTracking = () => {
+  useEffect(() => {
+    BackgroundGeolocation.configure({
+      desiredAccuracy: BackgroundGeolocation.HIGH_ACCURACY,
+      stationaryRadius: 50,
+      distanceFilter: 50,
+      notificationTitle: "Background tracking",
+      notificationText: "enabled",
+      debug: true,
+      startOnBoot: false,
+      stopOnTerminate: true,
+      locationProvider: BackgroundGeolocation.ACTIVITY_PROVIDER,
+      interval: 10000,
+      fastestInterval: 5000,
+      activitiesInterval: 10000,
+      stopOnStillActivity: false,
+      url: "http://your-api-endpoint.com/location",
+      httpHeaders: {
+        "X-FOO": "bar",
+      },
+      postTemplate: {
+        lat: "@latitude",
+        lon: "@longitude",
+        foo: "bar",
+      },
+    });
+
+    const onLocation = (location) => {
+      BackgroundGeolocation.startTask((taskKey) => {
+        // Handle long-running operations here
+        BackgroundGeolocation.endTask(taskKey);
+      });
+    };
+
+    const onStationary = (stationaryLocation) => {
+      // Handle stationary location
+    };
+
+    const onError = (error) => {
+      console.log("[ERROR] BackgroundGeolocation error:", error);
+    };
+
+    const onStart = () => {
+      console.log("[INFO] BackgroundGeolocation service has been started");
+    };
+
+    const onStop = () => {
+      console.log("[INFO] BackgroundGeolocation service has been stopped");
+    };
+
+    const onAuthorization = (status) => {
+      console.log("[INFO] Authorization status: " + status);
+      if (status !== BackgroundGeolocation.AUTHORIZED) {
+        setTimeout(
+          () =>
+            Alert.alert(
+              "Location permission required",
+              "Would you like to open app settings?",
+              [
+                {
+                  text: "Yes",
+                  onPress: () => BackgroundGeolocation.showAppSettings(),
+                },
+                {
+                  text: "No",
+                  style: "cancel",
+                },
+              ]
+            ),
+          1000
+        );
+      }
+    };
+
+    // Register event listeners
+    BackgroundGeolocation.on("location", onLocation);
+    BackgroundGeolocation.on("stationary", onStationary);
+    BackgroundGeolocation.on("error", onError);
+    BackgroundGeolocation.on("start", onStart);
+    BackgroundGeolocation.on("stop", onStop);
+    BackgroundGeolocation.on("authorization", onAuthorization);
+
+    // Check current status
+    BackgroundGeolocation.checkStatus((status) => {
+      if (!status.isRunning) {
+        BackgroundGeolocation.start();
+      }
+    });
+
+    // Cleanup
+    return () => {
+      BackgroundGeolocation.removeAllListeners();
+    };
+  }, []);
+
+  return null;
+};
+
+export default BgTracking;
+
 ```
 
 ## API

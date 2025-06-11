@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mak12/react-native-background-geolocation.git"
+    "url": "git+https://github.com/Aakashsajjad095/react-native-background-geolocation.git"
   },
   "keywords": [
     "gps",
@@ -34,9 +34,9 @@
   ],
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/mak12/react-native-background-geolocation/issues"
+    "url": "https://github.com/Aakashsajjad095/react-native-background-geolocation/issues"
   },
-  "homepage": "https://github.com/mak12/react-native-background-geolocation#readme",
+  "homepage": "https://github.com/Aakashsajjad095/react-native-background-geolocation#readme",
   "dependencies": {
     "@Aakashsajjad095/react-native-background-geolocation": "^0.7.5",
     "plist": "^3.0.1"
