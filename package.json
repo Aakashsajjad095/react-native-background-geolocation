@@ -1,5 +1,5 @@
 {
-  "name": "@aakashsajjad095/react-native-background-geolocation",
+  "name": "@aakashsajjad/react-native-background-geolocation",
   "version": "0.7.7",
   "description": "A React Native module for high-accuracy, battery-efficient background location tracking on iOS and Android",
   "main": "./index.js",
@@ -8,8 +8,8 @@
     "access": "public"
   },
   "scripts": {
-    "link": "@aakashsajjad095/react-native-background-geolocation/scripts/postlink.js",
-    "unlink": "@aakashsajjad095/react-native-background-geolocation/scripts/postunlink.js",
+    "link": "@aakashsajjad/react-native-background-geolocation/scripts/postlink.js",
+    "unlink": "@aakashsajjad/react-native-background-geolocation/scripts/postunlink.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -42,7 +42,7 @@
   },
   "homepage": "https://github.com/Aakashsajjad095/react-native-background-geolocation#readme",
   "dependencies": {
-    "@aakashsajjad095/react-native-background-geolocation": "^0.7.5",
+    "@aakashsajjad/react-native-background-geolocation": "^0.7.5",
     "plist": "^3.0.1"
   },
   "peerDependencies": {
