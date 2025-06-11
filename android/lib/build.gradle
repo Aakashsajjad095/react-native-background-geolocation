@@ -82,7 +82,7 @@ android {
 }
 
 dependencies {
-    implementation project(path: ':@Aakashsajjad095_react-native-background-geolocation-common')
+    implementation project(path: ':@aakashsajjad_react-native-background-geolocation-common')
 
     projDependencies.each {
         add(it.configuration, it.dependency)
