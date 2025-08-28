@@ -22,4 +22,4 @@ build
 
 # CircleCI
 .circleci
-res/
+# res/

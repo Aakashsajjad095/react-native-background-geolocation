@@ -90,6 +90,16 @@ For iOS 11:
 6. Add `NSLocationWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
 7. Add `NSLocationAlwaysAndWhenInUseUsageDescription` **App requires background tracking** to `Info.plist`
 
+
+### 🛠 Known Issue and Fix
+
+[error] : **package android.support.annotation does not exist** Run the following command in your project root to automatically migrate dependencies to AndroidX using Jetifier:
+
+```
+npx jetify
+```
+
+
 ## Submitting issues
 
 All new issues should follow instructions in [ISSUE_TEMPLATE.md](https://raw.githubusercontent.com/mauron85/react-native-background-geolocation/master/ISSUE_TEMPLATE.md).
