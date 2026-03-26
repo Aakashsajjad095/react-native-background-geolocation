@@ -1,5 +1,9 @@
 ## Changelog
 
+### [0.7.13] - 2026-03-26
+
+- Minor updates and maintenance
+
 ### [0.7.2] - 2022-05-23
 
 - Repo updated - https://www.npmjs.com/package/@aakashsajjad/react-native-background-geolocation
