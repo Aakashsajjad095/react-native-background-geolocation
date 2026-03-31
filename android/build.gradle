@@ -8,7 +8,7 @@ buildscript {
         mavenCentral()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.android.tools.build:gradle:3.4.1'
     }
 }
 
@@ -18,7 +18,7 @@ allprojects {
         maven { url "$rootDir/../node_modules/react-native/android" } // For react-native local artifacts
         google() // Google's Maven repository
         mavenCentral() // Maven Central repository
-        jcenter() // JCenter is deprecated, but kept for compatibility if needed
+        mavenCentral()
         // repo for react-native
         // https://mvnrepository.com/artifact/com.facebook.react/react-native?repo=springio-plugins-release
 

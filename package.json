@@ -1,6 +1,6 @@
 {
   "name": "@aakashsajjad/react-native-background-geolocation",
-  "version": "0.7.13",
+  "version": "0.7.14",
   "description": "A React Native module for high-accuracy, battery-efficient background location tracking on iOS and Android",
   "main": "./index.js",
   "types": "./index.d.ts",
@@ -42,7 +42,6 @@
   },
   "homepage": "https://github.com/Aakashsajjad095/react-native-background-geolocation#readme",
   "dependencies": {
-    "@aakashsajjad/react-native-background-geolocation": "^0.7.5",
     "plist": "^3.0.1"
   },
   "peerDependencies": {
